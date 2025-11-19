@@ -2,4 +2,100 @@
 
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+  background-image: url(../images/cover-image-dark.png);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.decorated-zone {
+  min-height: 375px;
+  position: relative;
+}
+
+.main__title {
+  font-family: IBM Plex Mono;
+  font-size: 116px;
+  line-height: 83%;
+  letter-spacing: 0%;
+  color: #db00ff;
+  text-shadow: 5px 5px #ff0070;
+}
+
+.main__text {
+  background-color: #ff0070;
+  margin-bottom: 60px;
+}
+
+.decorated-zone::before {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border-top: 1px solid #ff0070;
+  border-right: 1px solid #ff0070;
+  top: 10px;
+  right: 10px;
+}
+
+.decorated-zone::after {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border-bottom: 1px solid #ff0070;
+  border-left: 1px solid #ff0070;
+  bottom: 10px;
+  left: 10px;
+}
+
+.decorated-zone__decor-title {
+  text-transform: uppercase;
+  font-family: IBM Plex Mono;
+  color: #ff0070;
+  position: absolute;
+  right: 20px;
+  top: 14px;
+}
+
+.decorated-zone__decor-title::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  background: rgb(255, 0, 0);
+  border-radius: 50%;
+  filter: blur(2px);
+  margin-left: 11px;
+}
+
+.decorated-zone::after {
+  content: "";
+}
+
+.decorated-zone-block {
+  display: grid;
+}
+
+.header__theme-menu {
+  justify-self: right;
+  margin-top: 57px;
+}
+
+.header__theme-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.block__header {
+  color: #ff0070;
+}
+
+.block__card-header {
+  background-color: #ff0070;
+}
+
+.block__card-text {
+  color: aliceblue;
 }
