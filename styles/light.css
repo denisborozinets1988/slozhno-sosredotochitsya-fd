@@ -5,9 +5,20 @@
 */
 
 :root.theme-light {
-  /* сохраните этот селектор в приведённом виде.
-    Так стили написанные ниже будут иметь больший вес,
-    чем стили в медиазапросе предпочтений пользователя
-  */
+  .page {
+    background-image: url(../images/cover-image-light.png);
+  }
 
+  .main__title {
+    color: var(--main-title-color-light);
+    text-shadow: 5px 5px var(--accent-color-light);
+  }
+
+  .main__text {
+    background-color: var(--accent-color-light);
+  }
+
+  .block__header {
+    color: var(--text-color-light);
+  }
 }

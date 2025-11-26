@@ -3,9 +3,16 @@
   и их переопределение под различные устройства
 */
 
-:root{
-  --main-title-color: #DB00FF;
+:root {
+  --main-title-color: #db00ff;
   --accent-color: #ff0070;
   --font: "IBM Plex Mono", "Arial", sans-serif;
   --font-size-card-header: 18px;
+  --text-color-header-block: #000028;
+  --text-color-header-content: #000028;
+  --text-color-content: #F1B2CE;
+
+  --main-title-color-light: #ffc2e6;
+  --accent-color-light: #ff8dcb;
+  --text-color-light: #353430;
 }
