@@ -6,11 +6,10 @@
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
+  padding: 0 2px;
 }
 
 .decorated-zone {
-  height: 100hv;
-  min-height: 375px;
   position: relative;
 }
 
@@ -21,13 +20,7 @@
   line-height: 83%;
   letter-spacing: 0%;
   color: var(--main-title-color);
-  text-shadow: 5px 5px var(--accent-color);
-}
-
-.main__text {
-  font-family: var(--font);
-  background-color: var(--accent-color);
-  justify-self: end;
+  text-shadow: 4px 4px var(--accent-color);
 }
 
 .decorated-element::before {
@@ -39,6 +32,7 @@
   border-right: 1px solid var(--accent-color);
   top: 3px;
   right: 3px;
+  margin-right: -2px;
 }
 
 .decorated-element::after {
@@ -50,19 +44,25 @@
   border-left: 1px solid var(--accent-color);
   bottom: 9px;
   left: 2px;
+  margin-left: -2px;
 }
 
 .header__theme-menu-button {
   background: none;
-  border: none;
-  padding: 0;
   font-size: 18px;
   background-color: transparent;
   color: var(--accent-color);
   text-transform: lowercase;
-
-  width: 70px;
+  min-width: 69px;
   height: 26px;
+}
+
+.block__card-header-alt {
+  font-weight: normal;
+}
+
+.header__theme-menu-item {
+  border: solid 1px transparent;
 }
 
 .header__theme-menu-item:hover {
@@ -70,7 +70,7 @@
 }
 
 .header__theme-menu-button:enabled {
-  border: none;
+  border-color: transparent;
 }
 
 .header__theme-menu-button:disabled {
@@ -78,17 +78,18 @@
 }
 
 .header__theme-menu-button:focus {
-  border: none;
+  border-color: transparent;
   border-bottom: solid 1px var(--accent-color);
 }
 
 .decorated-zone__decor-title {
   text-transform: uppercase;
   font-family: IBM Plex Mono;
+  font-size: 18px;
   color: var(--accent-color);
   position: absolute;
-  right: 10px;
-  top: 4px;
+  right: 6px;
+  top: 3px;
 }
 
 .decorated-zone__decor-title::after {
@@ -116,40 +117,38 @@
 
 .header__theme-menu {
   justify-self: right;
-  margin-top: 49px;
-  margin-right: 3px;
+  margin-top: 48px;
 }
 
 .header__theme-menu-list {
   display: flex;
   flex-direction: column;
-  gap: 11px;
+  gap: 10px;
+  list-style-type: none;
 }
 
 .block__header {
   color: var(--accent-color);
   font-family: var(--font);
   font-size: var(--font-size-card-header);
-  letter-spacing: 0.1px;
   margin: 0px;
 }
 
 .main-block {
+  padding-top: 40px;
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 49px;
 }
 
 .block-rebuilding-title {
   display: grid;
-  row-gap: 19px;
-  margin-top: 41px;
+  row-gap: 21px;
 }
 
 .block-rebuilding-cards {
   display: grid;
   row-gap: 19px;
-  margin-top: 41px;
 }
 
 .super-block {
@@ -175,12 +174,13 @@
   font-size: var(--font-size-card-header);
   line-height: 23.4px;
   color: #f1b2ce;
-  margin-top: 12px;
+  margin-top: 11px;
   margin-bottom: 0px;
   padding-right: 4px;
 }
 
 .main__text {
+  background-color: var(--accent-color);
   font-family: var(--font);
   font-size: var(--font-size-card-header);
   font-weight: bold;
@@ -194,23 +194,19 @@
   position: relative;
   display: flex;
   align-items: center;
-  margin-top: 45px;
+  margin-top: 46px;
 }
 
 .footer__title {
-  padding-left: 5px;
-  padding-bottom: 3px;
-}
-
-.gallery {
-  margin-top: 47px;
+  padding-left: 3px;
+  padding-bottom: 5px;
+  text-shadow: 2px 2px var(--accent-color);
 }
 
 .images {
   display: grid;
   margin-top: 10px;
-  padding: 1px;
-  gap: 8px;
+  gap: 10px;
 }
 
 .gallery__image {
@@ -218,6 +214,7 @@
   height: 100%;
   max-height: 100%;
   object-fit: cover;
+  margin-bottom: -4px;
 }
 
 .gallery__item {
@@ -230,12 +227,31 @@
 }
 
 @media (min-width: 768px) {
+  .page {
+    padding: 0 10px;
+  }
+
   .main__title {
-    color: #0000ff;
+    margin-left: -7px;
+  }
+
+  .decorated-zone {
+    min-height: 1024px;
+  }
+
+  .block__header {
+    margin-top: 2px;
+    margin-left: 2px;
+  }
+
+  .block__header-line {
+    width: 128px;
   }
 
   .block-rebuilding-title {
     grid-template-columns: 236px 1fr;
+    gap: 22px;
+    margin-top: 50px;
   }
 
   .images {
@@ -263,6 +279,28 @@
 
   .gallery__item:nth-child(5) {
     grid-column: 2 / 4;
+  }
+
+  .decorated-zone-block {
+    height: 1024px;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+
+  .main__text {
+    margin-right: 9px;
+    max-width: 315px;
+    justify-self: right;
+    margin-top: 34px;
+  }
+
+  .header__theme-menu {
+    margin-block-start: 165px;
+    margin-right: 10px;
+  }
+
+  .main__title {
+    margin-block-start: 117px;
+    letter-spacing: 2px;
   }
 }
 
