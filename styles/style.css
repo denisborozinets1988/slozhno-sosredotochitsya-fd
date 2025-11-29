@@ -1,28 +1,21 @@
-/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
-
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
   background-image: url(../images/cover-image-dark.png);
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
-  padding: 0 2px;
 }
 
+/* ШАПКА */
+
+/* вся зона шапки */
 .decorated-zone {
-  position: relative;
+  min-height: 100vh;
+  display: grid;
+  align-content: space-around;
 }
 
-.main__title {
-  font-family: var(--font);
-  font-weight: 700;
-  font-size: 116px;
-  line-height: 83%;
-  letter-spacing: 0%;
-  color: var(--main-title-color);
-  text-shadow: 4px 4px var(--accent-color);
-}
-
+/* правый-верхний уголок */
 .decorated-element::before {
   content: "";
   position: absolute;
@@ -30,11 +23,11 @@
   height: 24px;
   border-top: 1px solid var(--accent-color);
   border-right: 1px solid var(--accent-color);
-  top: 3px;
-  right: 3px;
-  margin-right: -2px;
+  right: 10px;
+  top: 10px;
 }
 
+/* левый-нижний уголок */
 .decorated-element::after {
   content: "";
   position: absolute;
@@ -42,60 +35,26 @@
   height: 24px;
   border-bottom: 1px solid var(--accent-color);
   border-left: 1px solid var(--accent-color);
-  bottom: 9px;
-  left: 2px;
-  margin-left: -2px;
+  left: 10px;
+  bottom: 10px;
 }
 
-.header__theme-menu-button {
-  background: none;
-  font-size: 18px;
-  background-color: transparent;
-  color: var(--accent-color);
-  text-transform: lowercase;
-  min-width: 69px;
-  height: 26px;
-}
-
-.block__card-header-alt {
-  font-weight: normal;
-}
-
-.header__theme-menu-item {
-  border: solid 1px transparent;
-}
-
-.header__theme-menu-item:hover {
-  border: solid 1px color(from var(--accent-color) srgb r g b / 0.4);
-}
-
-.header__theme-menu-button:enabled {
-  border-color: transparent;
-}
-
-.header__theme-menu-button:disabled {
-  border: solid 1px var(--accent-color);
-}
-
-.header__theme-menu-button:focus {
-  border-color: transparent;
-  border-bottom: solid 1px var(--accent-color);
-}
-
+/* REC */
 .decorated-zone__decor-title {
   text-transform: uppercase;
   font-family: IBM Plex Mono;
   font-size: 18px;
   color: var(--accent-color);
   position: absolute;
-  right: 6px;
-  top: 3px;
+  right: 16px;
+  top: 12px;
 }
 
+/* кружок после REC */
 .decorated-zone__decor-title::after {
   content: "";
-  width: 12px;
-  height: 12px;
+  width: 13px;
+  height: 13px;
   display: inline-block;
   background: rgb(255, 0, 0);
   border-radius: 50%;
@@ -103,21 +62,11 @@
   margin-left: 11px;
 }
 
-.decorated-zone::after {
-  content: "";
-}
-
-.decorated-zone-block {
-  display: grid;
-  grid-template-rows: 152px 307px 200px;
-}
-
-.main-text-block {
-}
-
+/* Меню с кнопками */
 .header__theme-menu {
+  margin-block-start: 46px;
+  margin-inline-end: 10px;
   justify-self: right;
-  margin-top: 48px;
 }
 
 .header__theme-menu-list {
@@ -127,85 +76,137 @@
   list-style-type: none;
 }
 
-.block__header {
+/* Кнопка темы */
+.header__theme-menu-button {
+  background: none;
+  font-family: var(--font);
+  font-size: 18px;
+  background-color: transparent;
   color: var(--accent-color);
+  text-transform: lowercase;
+  min-width: 69px;
+  height: 26px;
+}
+
+.header__theme-menu-button:disabled {
+  border: solid 1px var(--accent-color);
+}
+
+.header__theme-menu-button:focus {
+  border-bottom: solid 1px var(--accent-color);
+}
+
+/* li с кнопкой темы */
+.header__theme-menu-item {
+  border: solid 1px transparent;
+}
+
+.header__theme-menu-item:hover {
+  border: solid 1px color(from var(--accent-color) srgb r g b / 0.4);
+}
+
+/* Основная надпись */
+.main__title {
+  padding-block-start: 10px;
+  padding-inline-start: 10px;
+  line-height: 83%;
+  font-family: var(--font);
+  font-weight: 700;
+  /* font-size: clamp() рассчитано https://clamp.font-size.app/?config=eyJyb290IjoiMTYiLCJtaW5XaWR0aCI6IjM3NXB4IiwibWF4V2lkdGgiOiI3NjhweCIsIm1pbkZvbnRTaXplIjoiMTE2cHgiLCJtYXhGb250U2l6ZSI6IjEyMHB4In0%3D */
+  font-size: clamp(7.25rem, 7.25rem + 0vw, 7.25rem);
+  color: var(--main-title-color);
+  text-shadow: 4px 4px var(--accent-color);
+  justify-self: left;
+}
+
+/* Текст */
+.main__text {
+  margin-inline-start: 10px;
+  margin-inline-end: 10px;
+  margin-block-end: 37px;
+  background-color: var(--accent-color);
   font-family: var(--font);
   font-size: var(--font-size-card-header);
-  margin: 0px;
+  font-weight: bold;
+  line-height: 23.4px;
 }
 
-.main-block {
-  padding-top: 40px;
-  display: flex;
-  flex-direction: column;
-  gap: 49px;
-}
+/* ОСНОВНОЙ КОНТЕНТ */
 
-.block-rebuilding-title {
-  display: grid;
-  row-gap: 21px;
-}
-
-.block-rebuilding-cards {
-  display: grid;
-  row-gap: 19px;
-}
-
+/* блок со всем контентом для задания общего цвета фона */
 .super-block {
   background-color: #000028;
 }
 
+/* флекс с блоками */
+.main-block {
+  padding: 42px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+/* Заголовок блока */
+.block__header {
+  color: var(--accent-color);
+  font-family: var(--font);
+  font-size: var(--font-size-card-header);
+  line-height: 23.4px;
+}
+
+.block {
+  display: grid;
+  row-gap: 20px;
+}
+
+/* флекс с карточками */
 .block__cards {
   display: flex;
   flex-direction: column;
   gap: 19px;
 }
 
+.block__cards_alt_gap {
+  gap: 20px;
+}
+
+/* флекс с карточкой */
+.block__card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Заголовок карточки */
 .block__card-header {
   background-color: var(--accent-color);
   font-family: var(--font);
   font-size: var(--font-size-card-header);
-  /*margin-bottom: 1px;*/
-  margin: 0px;
+  line-height: 23.4px;
 }
 
+/* Сброс жирности загаловка */
+.block__card-header-alt {
+  font-weight: normal;
+}
+
+/* Текст карточки */
 .block__card-text {
   font-family: var(--font);
   font-size: var(--font-size-card-header);
+  font-weight: 400;
   line-height: 23.4px;
   color: #f1b2ce;
-  margin-top: 11px;
-  margin-bottom: 0px;
-  padding-right: 4px;
 }
 
-.main__text {
-  background-color: var(--accent-color);
-  font-family: var(--font);
-  font-size: var(--font-size-card-header);
-  font-weight: bold;
-  line-height: 23.4px;
-  padding-right: 50px;
-}
-
-.footer {
-  height: 100hv;
-  min-height: 660px;
-  position: relative;
+.gallery {
   display: flex;
-  align-items: center;
-  margin-top: 46px;
-}
-
-.footer__title {
-  padding-left: 3px;
-  padding-bottom: 5px;
-  text-shadow: 2px 2px var(--accent-color);
+  flex-direction: column;
+  gap: 9px;
 }
 
 .images {
   display: grid;
-  margin-top: 10px;
   gap: 10px;
 }
 
@@ -214,7 +215,7 @@
   height: 100%;
   max-height: 100%;
   object-fit: cover;
-  margin-bottom: -4px;
+  margin-block-end: -4px;
 }
 
 .gallery__item {
@@ -226,17 +227,65 @@
   text-shadow: 1px 2px var(--accent-color);
 }
 
+/* ПОДВАЛ */
+
+.footer {
+  margin-block-start: -4px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.footer__title {
+  padding-inline: 14px;
+  padding-block-end: 7px;
+  text-shadow: 2px 2px var(--accent-color);
+}
+
+/* АДАПТИВ */
+
 @media (min-width: 768px) {
   .page {
     padding: 0 10px;
   }
 
-  .main__title {
-    margin-left: -7px;
+  /* ШАПКА */
+
+  /* правый-верхний уголок */
+  .decorated-element::before {
+    top: 20px;
+    right: 20px;
   }
 
-  .decorated-zone {
-    min-height: 1024px;
+  /* левый-нижний уголок */
+  .decorated-element::after {
+    bottom: 20px;
+    left: 20px;
+  }
+
+  /* REC */
+  .decorated-zone__decor-title {
+    right: 24px;
+    top: 21px;
+  }
+
+  /* Меню с кнопками */
+  .header__theme-menu {
+    margin-block-start: 107px;
+    margin-right: 10px;
+  }
+
+  /* Основная надпись */
+  .main__title {
+    margin-inline-start: -18px;
+    letter-spacing: 2px;
+  }
+
+  /* Текст */
+  .main__text {
+    max-width: 365px;
+    justify-self: right;
+    margin-block-end: 100px;
   }
 
   .block__header {
@@ -248,6 +297,7 @@
     width: 128px;
   }
 
+  /* При увеличении разрешения позволит заголовку перестроиться в левую колонку */
   .block-rebuilding-title {
     grid-template-columns: 236px 1fr;
     gap: 22px;
@@ -259,6 +309,7 @@
     grid-template-rows: repeat(3, 1fr);
   }
 
+  /* Выложим плитку из картинок */
   .gallery__item:nth-child(1) {
     grid-column: span 2;
   }
@@ -272,47 +323,42 @@
     grid-row: 2 / 4;
   }
 
-  /*.gallery__item:nth-child(4) {
-    grid-column: 2;
-    grid-row: 2;
-  }*/
-
   .gallery__item:nth-child(5) {
     grid-column: 2 / 4;
-  }
-
-  .decorated-zone-block {
-    height: 1024px;
-    grid-template-rows: 1fr 1fr 1fr;
-  }
-
-  .main__text {
-    margin-right: 9px;
-    max-width: 315px;
-    justify-self: right;
-    margin-top: 34px;
-  }
-
-  .header__theme-menu {
-    margin-block-start: 165px;
-    margin-right: 10px;
-  }
-
-  .main__title {
-    margin-block-start: 117px;
-    letter-spacing: 2px;
   }
 }
 
 @media (min-width: 1024px) {
   .main__title {
-    color: #ff0000;
+    font-size: 157px;
+    letter-spacing: 0;
+    margin-top: 275px;
+  }
+
+  .main__text {
+    max-width: 491px;
+    margin-top: 48px;
+  }
+
+  .header__theme-menu {
+    justify-self: center;
+    margin: 0;
+    position: absolute;
+    margin-block-start: 18px;
+  }
+
+  .header__theme-menu-list {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
   }
 
   .block-rebuilding-title {
     grid-template-columns: 315px 1fr;
   }
 
+  /* При увеличении разрешения позволит заголовку занять всю первую строку
+а карточкам выстроиться в 3 колонки */
   .block-rebuilding-cards {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 20px 1fr;

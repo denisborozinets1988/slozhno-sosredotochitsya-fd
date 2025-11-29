@@ -8,6 +8,7 @@
     <meta name="color-scheme" content="dark light" />
 
     <link rel="stylesheet" href="./fonts/fonts.css" />
+    <link rel="stylesheet" href="./styles/globals.css" />
     <link rel="stylesheet" href="./styles/variables.css" />
     <link rel="stylesheet" href="./styles/style.css" />
     <link rel="stylesheet" href="./styles/dark.css" />
@@ -19,7 +20,6 @@
   <body class="page">
     <header class="header decorated-zone decorated-element">
       <span class="decorated-zone__decor-title">rec</span>
-      <div class="decorated-zone-block">
         <nav class="header__theme-menu">
           <ul class="header__theme-menu-list">
             <li class="header__theme-menu-item">
@@ -47,18 +47,15 @@
           </ul>
         </nav>
         <h1 class="main__title">no focus</h1>
-        <div class="main-text-block">
-          <p class="main__text">
-            Что делать, когда не можешь делать ничего
-            <br>Или почему нам так сложно
-            сконцентрироваться, особенно когда очень надо
-          </p>
-        </div>
-      </div>
+        <p class="main__text">
+          Что делать, когда не можешь делать ничего
+          <br />Или почему нам так сложно сконцентрироваться, особенно когда
+          очень надо
+        </p>
     </header>
 
     <div class="super-block">
-      <div class="main-block">
+      <main class="main-block">
         <section class="block block-rebuilding-title">
           <h2 class="block__header">Почему сосредоточиться так сложно</h2>
           <div class="block__cards">
@@ -110,7 +107,7 @@
             </p>
           </div>
 
-          <div class="card">
+          <div class="block__card">
             <h3 class="block__card-header">Еда</h3>
             <p class="block__card-text">
               «Быстрые углеводы» — сахар, белый хлеб, сладости — молниеносно
@@ -141,15 +138,15 @@
             Как концентрироваться лучше, чем золотая рыбка (то есть дольше трёх
             секунд)
           </h2>
-          <div class="block__cards">
-            <div class="block__card">
-              <h3 class="block__card-header">
-                5 простых (на самом деле не очень) советов
-              </h3>
-            </div>
+          <div class="block__cards block__cards_alt_gap">
+            <h3 class="block__card-header">
+              5 простых (на самом деле не очень) советов
+            </h3>
 
             <div class="block__card">
-              <h3 class="block__card-header block__card-header-alt">Представьте небо и облака</h3>
+              <h3 class="block__card-header block__card-header-alt">
+                Представьте небо и облака
+              </h3>
               <p class="block__card-text">
                 Или листья в ручье. Тут дело в лёгкой медитации, которая
                 помогает успокоиться. Ведь часто именно тревожные мысли о
@@ -163,7 +160,9 @@
             </div>
 
             <div class="block__card">
-              <h3 class="block__card-header block__card-header-alt">Включите музыку</h3>
+              <h3 class="block__card-header block__card-header-alt">
+                Включите музыку
+              </h3>
               <p class="block__card-text">
                 Но не любую, и не любимую. Любимая может быть связана с сильными
                 положительными эмоциями, которые тоже очень сильно отвлекают.
@@ -173,7 +172,9 @@
             </div>
 
             <div class="block__card">
-              <h3 class="block__card-header block__card-header-alt">Прогуляйтесь</h3>
+              <h3 class="block__card-header block__card-header-alt">
+                Прогуляйтесь
+              </h3>
               <p class="block__card-text">
                 Или даже пробегитесь. Лучше найти парк или лес: один эксперимент
                 <span class="text-link">показал</span>, что созерцание природы
@@ -186,7 +187,9 @@
             </div>
 
             <div class="block__card">
-              <h3 class="block__card-header block__card-header-alt">Хорошо ешьте</h3>
+              <h3 class="block__card-header block__card-header-alt">
+                Хорошо ешьте
+              </h3>
               <p class="block__card-text">
                 Мы — не ваша бабушка, но это правда важно. Выбирайте продукты,
                 которые препятствуют резким скачкам сахара в крови. Например, с
@@ -208,32 +211,30 @@
           </div>
         </section>
 
-              <section class="gallery">
-        <h3 class="block__card-header">А можно в картинках?</h3>
+        <section class="gallery">
+          <h3 class="block__card-header">А можно в картинках?</h3>
 
-        <div class="images">
-          <figure class="gallery__item">
-            <img src="./images/sunset.png" alt class="gallery__image" />
-          </figure>
-          <figure class="gallery__item">
-            <img src="./images/ice-cream.png" alt class="gallery__image" />
-          </figure>
-          <figure class="gallery__item">
-            <img src="./images/tape.png" alt class="gallery__image" />
-          </figure>
-          <figure class="gallery__item">
-            <img src="./images/books.png" alt class="gallery__image" />
-          </figure>
-          <figure class="gallery__item">
-            <img src="./images/street.png" alt class="gallery__image" />
-          </figure>
-        </div>
-      </section>
-      </div>
+          <div class="images">
+            <figure class="gallery__item">
+              <img src="./images/sunset.png" alt class="gallery__image" />
+            </figure>
+            <figure class="gallery__item">
+              <img src="./images/ice-cream.png" alt class="gallery__image" />
+            </figure>
+            <figure class="gallery__item">
+              <img src="./images/tape.png" alt class="gallery__image" />
+            </figure>
+            <figure class="gallery__item">
+              <img src="./images/books.png" alt class="gallery__image" />
+            </figure>
+            <figure class="gallery__item">
+              <img src="./images/street.png" alt class="gallery__image" />
+            </figure>
+          </div>
+        </section>
+      </main>
 
-
-
-      <footer class="footer decorated-element">
+      <footer class="footer decorated-zone decorated-element">
         <span class="main__title footer__title">focus</span>
       </footer>
     </div>
