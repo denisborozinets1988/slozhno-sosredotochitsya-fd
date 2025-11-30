@@ -232,8 +232,6 @@
 .footer {
   margin-block-start: -4px;
   position: relative;
-  display: flex;
-  align-items: center;
 }
 
 .footer__title {
@@ -247,6 +245,12 @@
 @media (min-width: 768px) {
   .page {
     padding: 0 10px;
+  }
+
+  .main-block {
+    padding: 10px 8px;
+    padding-block-start: 60px;
+    gap: 80px;
   }
 
   /* ШАПКА */
@@ -288,25 +292,36 @@
     margin-block-end: 100px;
   }
 
+  .block-rebuilding-cards {
+    padding: 0px 2px;
+  }
+
   .block__header {
-    margin-top: 2px;
-    margin-left: 2px;
+    padding-inline: 1px;
+    padding-block-start: 1px;
   }
 
   .block__header-line {
     width: 128px;
   }
 
-  /* При увеличении разрешения позволит заголовку перестроиться в левую колонку */
-  .block-rebuilding-title {
-    grid-template-columns: 236px 1fr;
-    gap: 22px;
-    margin-top: 50px;
+  .gallery {
+    gap: 18px;
+    padding: 0px 1px;
   }
 
   .images {
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  /* Перестроим заголовок в левую колонку */
+  .block-rebuilding-title {
+    grid-template-columns: 236px 1fr;
+    gap: 22px;
+  }
+
+  .block__cards {
+    margin-inline-end: 1px;
   }
 
   /* Выложим плитку из картинок */
@@ -315,8 +330,8 @@
   }
 
   .gallery__item:nth-child(2) {
-    grid-column: 3/4;
-    grid-row: 1/3;
+    grid-column: 3 / 4;
+    grid-row: 1 / 3;
   }
 
   .gallery__item:nth-child(3) {
@@ -325,6 +340,22 @@
 
   .gallery__item:nth-child(5) {
     grid-column: 2 / 4;
+  }
+
+  .footer {
+    margin-block-start: 50px;
+  }
+
+  .footer__title {
+    margin-inline-start: 181px;
+  }
+
+  .decorated-element-footer::before {
+    right: 10px;
+  }
+
+  .decorated-element-footer::after {
+    left: 10px;
   }
 }
 
@@ -353,19 +384,33 @@
     gap: 10px;
   }
 
-  .block-rebuilding-title {
-    grid-template-columns: 315px 1fr;
-  }
-
   /* При увеличении разрешения позволит заголовку занять всю первую строку
 а карточкам выстроиться в 3 колонки */
   .block-rebuilding-cards {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 20px 1fr;
-    gap: 10px;
+    gap: 20px;
+  }
+
+  .block__header {
+    min-width: 315px;
   }
 
   .block__header-line {
     grid-column: span 3;
+    grid-row: span 2;
+  }
+
+  .block-rebuilding-title {
+    grid-template-columns: 315px 1fr;
+  }
+
+  .footer__title {
+    margin-block-end: 280px;
+    margin-inline-start: 253px;
+  }
+
+  .footer {
+    margin-block-start: 320px;
   }
 }
