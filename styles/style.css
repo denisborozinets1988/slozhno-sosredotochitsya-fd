@@ -136,7 +136,7 @@
 
 /* блок со всем контентом для задания общего цвета фона */
 .super-block {
-  background-color: #000028;
+  background-color: var(--background-color);
 }
 
 /* флекс с блоками */
@@ -248,7 +248,8 @@
 /* АДАПТИВ */
 
 @media (min-width: 768px) {
-  .page {
+  .decorated-zone,
+  .super-block {
     padding: 0 10px;
   }
 
@@ -286,6 +287,8 @@
 
   /* Основная надпись */
   .main__title {
+    /* font-size: clamp() рассчитано https://clamp.font-size.app/?config=eyJyb290IjoiMTYiLCJtaW5XaWR0aCI6Ijc2OHB4IiwibWF4V2lkdGgiOiIxMDI0cHgiLCJtaW5Gb250U2l6ZSI6IjEyMHB4IiwibWF4Rm9udFNpemUiOiIxNTdweCJ9 */
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
     margin-inline-start: -18px;
     letter-spacing: 2px;
   }
