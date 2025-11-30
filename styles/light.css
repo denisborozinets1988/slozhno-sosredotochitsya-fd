@@ -16,9 +16,71 @@
 
   .main__text {
     background-color: var(--accent-color-light);
+    color: var(--text-color-light);
   }
 
   .block__header {
     color: var(--text-color-light);
+  }
+
+  /* REC не виден */
+  .decorated-zone__decor-title {
+    display: none;
+  }
+
+  /* правый-верхний уголок */
+  .decorated-element::before {
+    border-top: 1px solid var(--text-color-light);
+    border-right: 1px solid var(--text-color-light);
+  }
+
+  /* левый-нижний уголок */
+  .decorated-element::after {
+    border-bottom: 1px solid var(--text-color-light);
+    border-left: 1px solid var(--text-color-light);
+  }
+
+  /* Кнопка темы */
+  .header__theme-menu-button {
+    color: var(--text-color-light);
+  }
+
+  .header__theme-menu-button:disabled {
+    border: solid 1px var(--text-color-light);
+  }
+
+  .header__theme-menu-button:focus {
+    border-bottom: solid 1px var(--text-color-light);
+  }
+
+  .header__theme-menu-item:hover {
+    border: solid 1px color(from var(--text-color-light) srgb r g b / 0.4);
+  }
+
+  .super-block {
+    background-color: var(--background-color-light);
+  }
+
+  .block__card-header {
+    background-color: var(--accent-color-light);
+    color: var(--text-color-light);
+  }
+
+  .block__card-text {
+    color: var(--text-color-light);
+  }
+
+  .text-link {
+    text-shadow: 1px 2px var(--accent-color-light);
+  }
+
+  .footer__title {
+    text-shadow: 2px 2px var(--accent-color-light);
+  }
+
+  @media (min-width: 1024px) {
+    .footer__title {
+      text-shadow: 2px 2px var(--accent-color);
+    }
   }
 }
