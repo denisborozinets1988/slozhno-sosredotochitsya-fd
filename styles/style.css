@@ -44,8 +44,8 @@
   font-size: 18px;
   color: var(--accent-color);
   position: absolute;
-  right: 16px;
-  top: 12px;
+  right: 15px;
+  top: 11px;
 }
 
 /* кружок после REC */
@@ -122,7 +122,7 @@
 .main__text {
   margin-inline-start: 10px;
   margin-inline-end: 10px;
-  margin-block-end: 37px;
+  margin-block-end: 38px;
   background-color: var(--accent-color);
   font-family: var(--font);
   font-size: var(--font-size-card-header);
@@ -139,7 +139,7 @@
 
 /* флекс с блоками */
 .main-block {
-  padding: 42px 10px;
+  padding: 40px 10px 35px;
   display: flex;
   flex-direction: column;
   gap: 50px;
@@ -155,7 +155,18 @@
 
 .block {
   display: grid;
-  row-gap: 20px;
+}
+
+.block-rebuilding-title {
+  gap: 21px;
+}
+
+.block-rebuilding-cards {
+  gap: 20px;
+}
+
+.block-alt-gap {
+  gap: 19px;
 }
 
 /* флекс с карточками */
@@ -201,12 +212,17 @@
 .gallery {
   display: flex;
   flex-direction: column;
-  gap: 9px;
+  gap: 10px;
 }
 
 .images {
   display: grid;
-  gap: 10px;
+  align-items: center;
+  gap: 6px;
+}
+
+.gallery__item {
+  box-sizing: border-box;
 }
 
 .gallery__image {
@@ -214,12 +230,6 @@
   height: 100%;
   max-height: 100%;
   object-fit: cover;
-  margin-block-end: -4px;
-}
-
-.gallery__item {
-  box-sizing: border-box;
-  margin: 0;
 }
 
 .text-link {
@@ -229,7 +239,6 @@
 /* ПОДВАЛ */
 
 .footer {
-  margin-block-start: -4px;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -279,7 +288,7 @@
 
   /* Меню с кнопками */
   .header__theme-menu {
-    margin-block-start: 107px;
+    margin-block-start: 110px;
     margin-right: 10px;
   }
 
@@ -287,15 +296,14 @@
   .main__title {
     /* font-size: clamp() рассчитано https://clamp.font-size.app/?config=eyJyb290IjoiMTYiLCJtaW5XaWR0aCI6Ijc2OHB4IiwibWF4V2lkdGgiOiIxMDI0cHgiLCJtaW5Gb250U2l6ZSI6IjEyMHB4IiwibWF4Rm9udFNpemUiOiIxNTdweCJ9 */
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-    margin-inline-start: -18px;
-    letter-spacing: 2px;
+    margin-inline-start: -20px;
   }
 
   /* Текст */
   .main__text {
     max-width: 365px;
     justify-self: right;
-    margin-block-end: 100px;
+    margin-block-end: 102px;
   }
 
   .block-rebuilding-cards {
@@ -312,12 +320,17 @@
   }
 
   .gallery {
-    gap: 18px;
-    padding: 0px 1px;
+    gap: 20px;
+    padding: 0 2px;
   }
 
   .images {
     gap: 20px;
+    align-items: unset;
+  }
+
+  .gallery__image {
+    margin-block-end: -4px;
   }
 
   /* Перестроим заголовок в левую колонку */

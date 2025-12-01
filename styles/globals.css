@@ -43,3 +43,7 @@ a {
   border: none;
   padding: 0;
 }
+
+figure {
+  margin: 0;
+}
