@@ -2,6 +2,8 @@
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
+  background-image: var(--background-image);
+  background-color: var(--background-color);
 }
 
 /* ШАПКА */
@@ -40,8 +42,8 @@
 /* REC */
 .decorated-zone__decor-title {
   text-transform: uppercase;
-  font-family: IBM Plex Mono;
-  font-size: 18px;
+  font-family: var(--font);
+  font-size: var(--font-size-content);
   color: var(--accent-color);
   position: absolute;
   right: 15px;
@@ -54,7 +56,7 @@
   width: 13px;
   height: 13px;
   display: inline-block;
-  background: rgb(255, 0, 0);
+  background: var(--accent-color);
   border-radius: 50%;
   filter: blur(2px);
   margin-left: 11px;
@@ -78,56 +80,46 @@
 .header__theme-menu-button {
   background: none;
   font-family: var(--font);
-  font-size: 18px;
+  font-size: var(--font-size-content);
   background-color: transparent;
   color: var(--accent-color);
   text-transform: lowercase;
   min-width: 70px;
   height: 26px;
   padding-block-end: 26px;
-}
-
-.header__theme-menu-button:disabled {
-  border: solid 1px var(--accent-color);
-}
-
-.header__theme-menu-button:focus {
-  border-bottom: solid 1px var(--accent-color);
-}
-
-/* li с кнопкой темы */
-.header__theme-menu-item {
   border: solid 1px transparent;
 }
 
-.header__theme-menu-item:hover {
+.header__theme-menu-button:focus-visible {
+  border-bottom: solid 1px var(--accent-color);
+}
+
+.header__theme-menu-button:not(.header__theme-menu-button_active):hover {
   border: solid 1px color(from var(--accent-color) srgb r g b / 0.4);
 }
 
-/* Основная надпись */
+.header__theme-menu-button_active {
+  border: solid 1px var(--accent-color);
+}
+
+/* Основная надпись шапки */
 .main__title {
   padding-block-start: 10px;
   padding-inline-start: 10px;
   line-height: 83%;
   font-family: var(--font);
   font-weight: 700;
-  /* font-size: clamp() рассчитано https://clamp.font-size.app/?config=eyJyb290IjoiMTYiLCJtaW5XaWR0aCI6IjM3NXB4IiwibWF4V2lkdGgiOiI3NjhweCIsIm1pbkZvbnRTaXplIjoiMTE2cHgiLCJtYXhGb250U2l6ZSI6IjEyMHB4In0%3D */
-  font-size: clamp(7.25rem, 7.25rem + 0vw, 7.25rem);
+  font-size: var(--font-size-header-title-mobile);
   color: var(--main-title-color);
-  text-shadow: 4px 4px var(--accent-color);
+  text-shadow: 4px 4px 0 var(--accent-color);
   justify-self: left;
 }
 
-/* Текст */
+/* Заголовок шапки */
 .main__text {
   margin-inline-start: 10px;
   margin-inline-end: 10px;
   margin-block-end: 38px;
-  background-color: var(--accent-color);
-  font-family: var(--font);
-  font-size: var(--font-size-card-header);
-  font-weight: bold;
-  line-height: 23.4px;
 }
 
 /* ОСНОВНОЙ КОНТЕНТ */
@@ -149,7 +141,7 @@
 .block__header {
   color: var(--accent-color);
   font-family: var(--font);
-  font-size: var(--font-size-card-header);
+  font-size: var(--font-size-content);
   line-height: 23.4px;
 }
 
@@ -191,8 +183,10 @@
 .block__card-header {
   background-color: var(--accent-color);
   font-family: var(--font);
-  font-size: var(--font-size-card-header);
+  font-size: var(--font-size-content);
+  color: var(--background-color);
   line-height: 23.4px;
+  font-weight: bold;
 }
 
 /* Сброс жирности загаловка */
@@ -203,7 +197,7 @@
 /* Текст карточки */
 .block__card-text {
   font-family: var(--font);
-  font-size: var(--font-size-card-header);
+  font-size: var(--font-size-content);
   font-weight: 400;
   line-height: 23.4px;
   color: #f1b2ce;
@@ -232,8 +226,17 @@
   object-fit: cover;
 }
 
+/* Ссылка в тексте */
 .text-link {
-  text-shadow: 1px 2px var(--accent-color);
+  text-shadow: 1px 2px 0 var(--accent-color);
+}
+
+.text-link:hover {
+  border-bottom: 2px solid var(--text-color);
+}
+
+.text-link:focus-visible {
+  outline: solid 1px var(--text-color);
 }
 
 /* ПОДВАЛ */
@@ -249,7 +252,7 @@
 .footer__title {
   padding-inline: 14px;
   padding-block-end: 7px;
-  text-shadow: 2px 2px var(--accent-color);
+  text-shadow: 2px 2px 0 var(--accent-color);
 }
 
 /* АДАПТИВ */
@@ -289,13 +292,11 @@
   /* Меню с кнопками */
   .header__theme-menu {
     margin-block-start: 110px;
-    margin-right: 10px;
   }
 
   /* Основная надпись */
   .main__title {
-    /* font-size: clamp() рассчитано https://clamp.font-size.app/?config=eyJyb290IjoiMTYiLCJtaW5XaWR0aCI6Ijc2OHB4IiwibWF4V2lkdGgiOiIxMDI0cHgiLCJtaW5Gb250U2l6ZSI6IjEyMHB4IiwibWF4Rm9udFNpemUiOiIxNTdweCJ9 */
-    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    font-size: var(--font-size-header-title-desktop);
     margin-inline-start: -20px;
   }
 
@@ -389,7 +390,7 @@
 
   .main__text {
     max-width: 491px;
-    margin-top: 48px;
+    margin-block-start: 48px;
   }
 
   .header__theme-menu {

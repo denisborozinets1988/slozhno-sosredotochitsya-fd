@@ -1,27 +1,10 @@
-/*
-  Специально для светлой темы при наличии класса.
-  Здесь окажутся стили, которые нужно переопределить принудительно,
-  переключая тему
-*/
-
 :root.theme-light {
-  .page {
-    background-image: url(../images/cover-image-light.png);
-  }
-
-  .main__title {
-    color: var(--main-title-color-light);
-    text-shadow: 5px 5px var(--accent-color-light);
-  }
-
-  .main__text {
-    background-color: var(--accent-color-light);
-    color: var(--text-color-light);
-  }
-
-  .block__header {
-    color: var(--text-color-light);
-  }
+  --background-image: url("../images/cover-image-light.png");
+  --background-color: #fff1f7;
+  --main-title-color: #ffc2e6;
+  --accent-color: #ff8dcb;
+  --accent-color-alternative: #ff0070;
+  --text-color: #353430;
 
   /* REC не виден */
   .decorated-zone__decor-title {
@@ -30,57 +13,140 @@
 
   /* правый-верхний уголок */
   .decorated-element::before {
-    border-top: 1px solid var(--text-color-light);
-    border-right: 1px solid var(--text-color-light);
+    border-top: 1px solid var(--text-color);
+    border-right: 1px solid var(--text-color);
   }
 
   /* левый-нижний уголок */
   .decorated-element::after {
-    border-bottom: 1px solid var(--text-color-light);
-    border-left: 1px solid var(--text-color-light);
+    border-bottom: 1px solid var(--text-color);
+    border-left: 1px solid var(--text-color);
   }
 
   /* Кнопка темы */
   .header__theme-menu-button {
-    color: var(--text-color-light);
+    color: var(--text-color);
   }
 
-  .header__theme-menu-button:disabled {
-    border: solid 1px var(--text-color-light);
+  .header__theme-menu-button_active {
+    border: solid 1px var(--text-color);
   }
 
-  .header__theme-menu-button:focus {
-    border-bottom: solid 1px var(--text-color-light);
+  .header__theme-menu-button:focus-visible {
+    border-bottom: solid 1px var(--text-color);
   }
 
-  .header__theme-menu-item:hover {
-    border: solid 1px color(from var(--text-color-light) srgb r g b / 0.4);
+  .header__theme-menu-button:not(.header__theme-menu-button_active):hover {
+    border: solid 1px color(from var(--text-color) srgb r g b / 0.4);
   }
 
-  .super-block {
-    background-color: var(--background-color-light);
+  /* Заголовок блока */
+  .block__header {
+    color: var(--text-color);
   }
 
+  /* Заголовок карточки */
   .block__card-header {
-    background-color: var(--accent-color-light);
-    color: var(--text-color-light);
+    background-color: var(--accent-color);
+    color: var(--text-color);
   }
 
+  /* Текст карточки */
   .block__card-text {
-    color: var(--text-color-light);
+    color: var(--text-color);
   }
 
+  /* Ссылка */
   .text-link {
-    text-shadow: 1px 2px var(--accent-color-light);
+    text-shadow: 1px 2px var(--accent-color);
   }
 
+  /* Заголовок подвала */
   .footer__title {
-    text-shadow: 2px 2px var(--accent-color-light);
+    text-shadow: 2px 2px var(--accent-color);
   }
 
   @media (min-width: 1024px) {
+    /* Заголовок подвала */
+    .footer__title {
+      text-shadow: 2px 2px var(--accent-color-alternative);
+    }
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --background-image: url("../images/cover-image-light.png");
+    --background-color: #fff1f7;
+    --main-title-color: #ffc2e6;
+    --accent-color: #ff8dcb;
+    --text-color: #353430;
+
+    /* REC не виден */
+    .decorated-zone__decor-title {
+      display: none;
+    }
+
+    /* правый-верхний уголок */
+    .decorated-element::before {
+      border-top: 1px solid var(--text-color);
+      border-right: 1px solid var(--text-color);
+    }
+
+    /* левый-нижний уголок */
+    .decorated-element::after {
+      border-bottom: 1px solid var(--text-color);
+      border-left: 1px solid var(--text-color);
+    }
+
+    /* Кнопка темы */
+    .header__theme-menu-button {
+      color: var(--text-color);
+    }
+
+    .header__theme-menu-button_active {
+      border: solid 1px var(--text-color);
+    }
+
+    .header__theme-menu-button:focus-visible {
+      border-bottom: solid 1px var(--text-color);
+    }
+
+    .header__theme-menu-button:not(.header__theme-menu-button_active):hover {
+      border: solid 1px color(from var(--text-color) srgb r g b / 0.4);
+    }
+
+    /* Заголовок блока */
+    .block__header {
+      color: var(--text-color);
+    }
+
+    /* Заголовок карточки */
+    .block__card-header {
+      background-color: var(--accent-color);
+      color: var(--text-color);
+    }
+
+    /* Текст карточки */
+    .block__card-text {
+      color: var(--text-color);
+    }
+
+    /* Ссылка */
+    .text-link {
+      text-shadow: 1px 2px var(--accent-color);
+    }
+
+    /* Заголовок подвала */
     .footer__title {
       text-shadow: 2px 2px var(--accent-color);
+    }
+
+    @media (min-width: 1024px) {
+      /* Заголовок подвала */
+      .footer__title {
+        text-shadow: 2px 2px var(--accent-color-alternative);
+      }
     }
   }
 }

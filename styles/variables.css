@@ -1,20 +1,19 @@
-/*
-  Переменные для вашего проекта
-  и их переопределение под различные устройства
-*/
-
 :root {
+  --font: "IBM Plex Mono", "Arial", sans-serif;
+  --font-size-content: 18px;
+
+  /* рассчитано https://clamp.font-size.app/?config=eyJyb290IjoiMTYiLCJtaW5XaWR0aCI6IjM3NXB4IiwibWF4V2lkdGgiOiI3NjhweCIsIm1pbkZvbnRTaXplIjoiMTE2cHgiLCJtYXhGb250U2l6ZSI6IjEyMHB4In0%3D */
+  --font-size-header-title-mobile: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  /* рассчитано https://clamp.font-size.app/?config=eyJyb290IjoiMTYiLCJtaW5XaWR0aCI6Ijc2OHB4IiwibWF4V2lkdGgiOiIxMDI0cHgiLCJtaW5Gb250U2l6ZSI6IjEyMHB4IiwibWF4Rm9udFNpemUiOiIxNTdweCJ9 */
+  --font-size-header-title-desktop: clamp(
+    7.5rem,
+    0.5625rem + 14.4531vw,
+    9.8125rem
+  );
+
+  --background-image: url("../images/cover-image-dark.png");
+  --background-color: #000028;
   --main-title-color: #db00ff;
   --accent-color: #ff0070;
-  --font: "IBM Plex Mono", "Arial", sans-serif;
-  --font-size-card-header: 1.125rem;
-  --text-color-header-block: #000028;
-  --text-color-header-content: #000028;
-  --text-color-content: #F1B2CE;
-  --background-color: #000028;
-
-  --main-title-color-light: #ffc2e6;
-  --accent-color-light: #ff8dcb;
-  --text-color-light: #353430;
-  --background-color-light: #FFF1F7;
+  --text-color: #f1b2ce;
 }
