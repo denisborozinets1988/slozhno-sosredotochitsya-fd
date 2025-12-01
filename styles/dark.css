@@ -45,7 +45,7 @@
   }
 
   /* Заголовок карточки */
-  .block__card-header {
+  .card-header {
     background-color: var(--accent-color);
     color: var(--background-color);
   }
