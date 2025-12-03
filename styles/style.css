@@ -70,14 +70,14 @@
 /* Меню с кнопками */
 .header__theme-menu {
   margin-block-start: 47px;
-  margin-inline-end: 10px;
+  margin-inline-end: 12px;
   justify-self: right;
 }
 
 .header__theme-menu-list {
   display: flex;
   flex-direction: column;
-  gap: 9px;
+  gap: 12px;
   list-style-type: none;
 }
 
@@ -89,9 +89,9 @@
   color: var(--accent-color);
   background-color: transparent;
   text-transform: lowercase;
-  min-width: 70px;
-  max-height: 26px;
-  padding-block-end: 26px;
+  min-width: 68px;
+  max-height: 24px;
+  padding-block-end: 24px;
   cursor: pointer;
 }
 
@@ -110,7 +110,7 @@
 
 /* Основная надпись шапки */
 .decorated-zone__main-title {
-  padding-block-start: 10px;
+  padding-block-start: 13px;
   padding-inline-start: 10px;
   line-height: 83%;
   font-family: var(--font, "Arial");
@@ -268,7 +268,7 @@
 
 .footer__title {
   padding-inline: 14px;
-  padding-block-end: 7px;
+  padding-block-end: 9px;
   text-shadow: 2px 2px var(--accent-color);
 }
 
@@ -306,7 +306,7 @@
 
   /* Меню с кнопками */
   .header__theme-menu {
-    margin-block-start: 110px;
+    margin-block-start: 111px;
   }
 
   /* Основная надпись */
@@ -410,7 +410,7 @@
     margin: 0;
     position: absolute;
     top: 0px;
-    margin-block-start: 18px;
+    margin-block-start: 20px;
   }
 
   .header__theme-menu-list {
