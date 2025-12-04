@@ -34,4 +34,5 @@
   --link-underline: 2px solid var(--text-color);
   --link-shadow: 2px 1px 0 var(--accent-color);
   --footer-shadow: 2px 2px var(--accent-color);
+  --footer-shadow-alt: 2px 2px var(--accent-color-alt);
 }
