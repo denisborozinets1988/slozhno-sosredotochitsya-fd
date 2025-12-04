@@ -9,7 +9,7 @@
   --block-title-text-color: var(--accent-color);
   --card-title-text-color: var(--background-color);
 
-  /* REC не виден */
+  /* REC виден */
   .decorated-zone__decor-title {
     display: inline;
   }
