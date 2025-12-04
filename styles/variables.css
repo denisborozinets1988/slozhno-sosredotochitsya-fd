@@ -14,12 +14,14 @@
   --background-image: url("../images/cover-image-dark.png");
   --background-color: #000028;
   --accent-color: #ff0070;
+  --accent-color-alt: var(--accent-color);
   --main-title-color: #db00ff;
   --text-color: #f1b2ce;
 
   --decor-color: var(--accent-color);
   --decor-outline: 1px solid var(--decor-color);
-  --decor-outline-hover: 1px solid color(from var(--decor-color) srgb r g b / 0.4);
+  --decor-outline-hover: 1px solid
+    color(from var(--decor-color) srgb r g b / 0.4);
   --decor-underline: 0px 1px var(--decor-color);
   --main-title-text-color: var(--main-title-color);
   --main-title-shadow: 4px 4px 0 var(--accent-color);

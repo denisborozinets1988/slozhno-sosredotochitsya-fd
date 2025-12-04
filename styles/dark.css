@@ -2,6 +2,7 @@
   --background-image: url("../images/cover-image-dark.png");
   --background-color: #000028;
   --accent-color: #ff0070;
+  --accent-color-alt: var(--accent-color);
   --main-title-color: #db00ff;
   --text-color: #f1b2ce;
 

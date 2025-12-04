@@ -436,5 +436,6 @@
   .footer__title {
     margin-block-start: 0px;
     margin-inline-start: 0px;
+    text-shadow: 2px 2px var(--accent-color-alt);
   }
 }
