@@ -29,16 +29,16 @@
 
 /* правый-верхний уголок */
 .decorated-element::before {
-  border-top: var(--border);
-  border-right: var(--border);
+  border-top: var(--decor-outline);
+  border-right: var(--decor-outline);
   top: 10px;
   right: 10px;
 }
 
 /* левый-нижний уголок */
 .decorated-element::after {
-  border-bottom: var(--border);
-  border-left: var(--border);
+  border-bottom: var(--decor-outline);
+  border-left: var(--decor-outline);
   bottom: 10px;
   left: 10px;
 }
@@ -48,7 +48,7 @@
   text-transform: uppercase;
   font-family: var(--font, "Arial");
   font-size: var(--font-size-content);
-  color: var(--accent-color);
+  color: var(--decor-color);
   position: absolute;
   right: 15px;
   top: 11px;
@@ -60,7 +60,7 @@
   width: 13px;
   height: 13px;
   display: inline-block;
-  background: var(--accent-color);
+  background: var(--decor-color);
   border-radius: 50%;
   filter: blur(2px);
   margin-left: 8px;
@@ -86,7 +86,7 @@
   background: none;
   font-family: var(--font, "Arial");
   font-size: var(--font-size-content);
-  color: var(--accent-color);
+  color: var(--decor-color);
   background-color: transparent;
   text-transform: lowercase;
   min-width: 68px;
@@ -96,16 +96,16 @@
 }
 
 .header__theme-menu-button_active {
-  outline: 1px solid var(--accent-color);
+  outline: var(--decor-outline);
   pointer-events: none;
 }
 
 .header__theme-menu-button:focus-visible {
-  box-shadow: 0px 1px var(--accent-color);
+  box-shadow: var(--decor-underline);
 }
 
 .header__theme-menu-button:not(.header__theme-menu-button_active):hover {
-  outline: 1px solid color(from var(--accent-color) srgb r g b / 0.4);
+  outline: var(--decor-outline-hover);
 }
 
 /* Основная надпись шапки */
@@ -117,7 +117,7 @@
   font-weight: 700;
   font-size: var(--font-size-header-title-mobile);
   color: var(--main-title-color);
-  text-shadow: 4px 4px 0 var(--accent-color);
+  text-shadow: var(--main-title-shadow);
   justify-self: left;
 }
 
@@ -142,7 +142,7 @@
 .block__header {
   font-family: var(--font, "Arial");
   font-size: var(--font-size-content);
-  color: var(--accent-color);
+  color: var(--block-title-text-color);
   line-height: 23.4px;
 }
 
@@ -196,8 +196,8 @@
 .card-header {
   font-family: var(--font, "Arial");
   font-size: var(--font-size-content);
-  background-color: var(--accent-color);
-  color: var(--background-color);
+  background-color: var(--card-title-background-color);
+  color: var(--card-title-text-color);
   line-height: 23.4px;
   font-weight: bold;
 }
@@ -211,22 +211,22 @@
 .block__card-text {
   font-family: var(--font, "Arial");
   font-size: var(--font-size-content);
-  color: var(--text-color);
+  color: var(--card-text-color);
   font-weight: 400;
   line-height: 23.4px;
 }
 
 /* Ссылка в тексте */
 .text-link {
-  text-shadow: 2px 1px 0 var(--accent-color);
+  text-shadow: var(--link-shadow);
 }
 
 .text-link:hover {
-  border-bottom: 2px solid var(--text-color);
+  border-bottom: var(--link-underline);
 }
 
 .text-link:focus-visible {
-  outline: solid 1px var(--text-color);
+  outline: var(--link-outline);
 }
 
 .gallery {
@@ -269,7 +269,7 @@
 .footer__title {
   padding-inline: 14px;
   padding-block-end: 9px;
-  text-shadow: 2px 2px var(--accent-color);
+  text-shadow: var(--footer-shadow);
 }
 
 /* АДАПТИВ */

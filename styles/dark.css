@@ -1,51 +1,16 @@
 :root.theme-dark {
   --background-image: url("../images/cover-image-dark.png");
   --background-color: #000028;
-  --main-title-color: #db00ff;
   --accent-color: #ff0070;
+  --main-title-color: #db00ff;
   --text-color: #f1b2ce;
+
+  --decor-color: var(--accent-color);
+  --block-title-text-color: var(--accent-color);
+  --card-title-text-color: var(--background-color);
 
   /* REC не виден */
   .decorated-zone__decor-title {
     display: inline;
-  }
-
-  /* правый-верхний уголок */
-  .decorated-element::before {
-    border-top: var(--border);
-    border-right: var(--border);
-  }
-
-  /* левый-нижний уголок */
-  .decorated-element::after {
-    border-bottom: var(--border);
-    border-left: var(--border);
-  }
-
-  /* Кнопка темы */
-  .header__theme-menu-button {
-    color: var(--accent-color);
-  }
-
-  .header__theme-menu-button_active {
-    outline: 1px solid var(--accent-color);
-  }
-
-  .header__theme-menu-button:focus-visible {
-    box-shadow: 0px 1px var(--accent-color);
-  }
-
-  .header__theme-menu-button:not(.header__theme-menu-button_active):hover {
-    outline: 1px solid color(from var(--accent-color) srgb r g b / 0.4);
-  }
-
-  /* Заголовок блока */
-  .block__header {
-    color: var(--accent-color);
-  }
-
-  /* Заголовок карточки */
-  .card-header {
-    color: var(--background-color);
   }
 }

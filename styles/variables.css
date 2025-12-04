@@ -13,8 +13,23 @@
 
   --background-image: url("../images/cover-image-dark.png");
   --background-color: #000028;
-  --main-title-color: #db00ff;
   --accent-color: #ff0070;
+  --main-title-color: #db00ff;
   --text-color: #f1b2ce;
-  --border: 1px solid var(--accent-color);
+
+  --decor-color: var(--accent-color);
+  --decor-outline: 1px solid var(--decor-color);
+  --decor-outline-hover: 1px solid color(from var(--decor-color) srgb r g b / 0.4);
+  --decor-underline: 0px 1px var(--decor-color);
+  --main-title-text-color: var(--main-title-color);
+  --main-title-shadow: 4px 4px 0 var(--accent-color);
+  --main-title-shadow-color: var(--accent-color);
+  --block-title-text-color: var(--accent-color);
+  --card-title-text-color: var(--background-color);
+  --card-title-background-color: var(--accent-color);
+  --card-text-color: var(--text-color);
+  --link-outline: solid 1px var(--text-color);
+  --link-underline: 2px solid var(--text-color);
+  --link-shadow: 2px 1px 0 var(--accent-color);
+  --footer-shadow: 2px 2px var(--accent-color);
 }
